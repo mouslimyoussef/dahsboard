@@ -1,0 +1,622 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <title>Dashboard</title>
+</head>
+
+
+
+<body class="h-screen">
+    <div class="mb-5 ">
+        <div class="navigation flex justify-between border-b-2 border-gray-100 py-2 bg-gray-50 px-5 ">
+            <div class="flex items-center border0">
+                <div class="me-8">
+                    <img class="block mx-auto h-12 rounded-full sm:mx-0 sm:shrink-0" src="./assets/logo.png" alt="logo">
+                </div>
+                <div class="flex gap-2">
+                    <div></div>
+                    <button type="button" class="py-2.5 px-5  text-sm font-medium text-gray-900 focus:outline-none bg-gray-100 rounded-lg  hover:bg-white-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200">Dashboard</button>
+                    <button type="button" class="py-2.5 px-5  text-sm font-medium text-gray-900 focus:outline-none  rounded-lg  hover:bg-white-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200">Jobs</button>
+                    <button type="button" class="py-2.5 px-5  text-sm font-medium text-gray-900 focus:outline-none  rounded-lg  hover:bg-white-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200">Applicants</button>
+                    <button type="button" class="py-2.5 px-5  text-sm font-medium text-gray-900 focus:outline-none  rounded-lg  hover:bg-white-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200">Company</button>
+                </div>
+            </div>
+            <div class="flex ">
+                <div class="search-bar flex items-center ">
+                    <form class="m-0 me-7">
+                        <label for="voice-search" class="sr-only">Search</label>
+                        <div class="relative w-full">
+                            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                <svg class="icon" aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <input type="text" id="voice-search" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[300px] pl-10 p-2  " placeholder="Search" required>
+                            <button type="button" class="absolute inset-y-0 right-0 flex items-center pr-3">
+                            </button>
+                        </div>
+
+                </div>
+                <div class="notification-account flex">
+
+                    <div class="flex items-center me-3 opacity-50">
+                        <svg class="icon" width="25" height="25" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M427.68 351.43C402 320 383.87 304 383.87 217.35C383.87 138 343.35 109.73 310 96C305.57 94.18 301.4 90 300.05 85.45C294.2 65.54 277.8 48 256 48C234.2 48 217.79 65.55 212 85.47C210.65 90.07 206.48 94.18 202.05 96C168.66 109.75 128.18 137.92 128.18 217.35C128.13 304 110 320 84.3201 351.43C73.6801 364.45 83.0001 384 101.61 384H410.49C429 384 438.26 364.39 427.68 351.43Z"
+                                stroke="black" stroke-width="32" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M320 384V400C320 416.974 313.257 433.252 301.255 445.255C289.252 457.257 272.974 464 256 464C239.026 464 222.747 457.257 210.745 445.255C198.743 433.252 192 416.974 192 400V384"
+                                stroke="black" stroke-width="32" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </div>
+                    <div class="account-id flex items-center ">
+                        <img class="block  mx-auto h-7 w-7 rounded-full sm:mx-0 sm:shrink-0" src="./assets/profile.jpeg" alt="logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-header flex justify-between py-6 bg-gray-50 px-5 text-sm ">
+            <div class="flex flex-col gap-2">
+                <div class="flex  gap-5 items-center text-gray-400 ">
+                    <div class="">Jobs</div>
+                    <svg class="icon" width="15" height="15" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M184 112L328 256L184 400" stroke="gray" stroke-width="48" stroke-miterlimit="10"
+                            stroke-linecap="square" />
+                    </svg>
+
+                    <div class="">Engineering</div>
+                </div>
+                <div class="job-title">
+                    <h1 class="text-3xl  font-bold">Back end Developer </h1>
+                </div>
+                <div class="job-description-tags flex gap-3 text-gray-400">
+                    <div class="flex gap-2">
+                        <svg class="icon" width="20" height="20" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M454.66 169.4C451.692 166.413 448.16 164.045 444.271 162.432C440.382 160.818 436.211 159.992 432 160H368V144C368 114.296 356.2 85.8081 335.196 64.804C314.192 43.8 285.704 32 256 32C226.296 32 197.808 43.8 176.804 64.804C155.8 85.8081 144 114.296 144 144V160H80C71.5131 160 63.3737 163.371 57.3726 169.373C51.3714 175.374 48 183.513 48 192V408C48 447 81 480 120 480H392C410.865 480.006 428.983 472.63 442.48 459.45C449.272 452.97 454.681 445.181 458.38 436.553C462.078 427.925 463.99 418.637 464 409.25V192C464.013 187.803 463.194 183.645 461.591 179.766C459.988 175.887 457.632 172.364 454.66 169.4ZM320 336H192C187.757 336 183.687 334.314 180.686 331.314C177.686 328.313 176 324.243 176 320C176 315.757 177.686 311.687 180.686 308.686C183.687 305.686 187.757 304 192 304H320C324.243 304 328.313 305.686 331.314 308.686C334.314 311.687 336 315.757 336 320C336 324.243 334.314 328.313 331.314 331.314C328.313 334.314 324.243 336 320 336ZM336 160H176V144C176 122.783 184.429 102.434 199.431 87.4315C214.434 72.4285 234.783 64 256 64C277.217 64 297.566 72.4285 312.569 87.4315C327.571 102.434 336 122.783 336 144V160Z"
+                                fill="#A1A5B0" />
+                        </svg>
+
+                        <div class="job-tag">Full-time</div>
+                    </div>
+                    <div class="flex gap-2">
+                        <svg class="icon" width="20" height="20" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M454.66 169.4C451.692 166.413 448.16 164.045 444.271 162.432C440.382 160.818 436.211 159.992 432 160H368V144C368 114.296 356.2 85.8081 335.196 64.804C314.192 43.8 285.704 32 256 32C226.296 32 197.808 43.8 176.804 64.804C155.8 85.8081 144 114.296 144 144V160H80C71.5131 160 63.3737 163.371 57.3726 169.373C51.3714 175.374 48 183.513 48 192V408C48 447 81 480 120 480H392C410.865 480.006 428.983 472.63 442.48 459.45C449.272 452.97 454.681 445.181 458.38 436.553C462.078 427.925 463.99 418.637 464 409.25V192C464.013 187.803 463.194 183.645 461.591 179.766C459.988 175.887 457.632 172.364 454.66 169.4ZM320 336H192C187.757 336 183.687 334.314 180.686 331.314C177.686 328.313 176 324.243 176 320C176 315.757 177.686 311.687 180.686 308.686C183.687 305.686 187.757 304 192 304H320C324.243 304 328.313 305.686 331.314 308.686C334.314 311.687 336 315.757 336 320C336 324.243 334.314 328.313 331.314 331.314C328.313 334.314 324.243 336 320 336ZM336 160H176V144C176 122.783 184.429 102.434 199.431 87.4315C214.434 72.4285 234.783 64 256 64C277.217 64 297.566 72.4285 312.569 87.4315C327.571 102.434 336 122.783 336 144V160Z"
+                                fill="#A1A5B0" />
+                        </svg>
+
+                        <div class="job-tag">Remote</div>
+                    </div>
+                    <div class="flex gap-2">
+                        <svg class="icon" width="20" height="20" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M454.66 169.4C451.692 166.413 448.16 164.045 444.271 162.432C440.382 160.818 436.211 159.992 432 160H368V144C368 114.296 356.2 85.8081 335.196 64.804C314.192 43.8 285.704 32 256 32C226.296 32 197.808 43.8 176.804 64.804C155.8 85.8081 144 114.296 144 144V160H80C71.5131 160 63.3737 163.371 57.3726 169.373C51.3714 175.374 48 183.513 48 192V408C48 447 81 480 120 480H392C410.865 480.006 428.983 472.63 442.48 459.45C449.272 452.97 454.681 445.181 458.38 436.553C462.078 427.925 463.99 418.637 464 409.25V192C464.013 187.803 463.194 183.645 461.591 179.766C459.988 175.887 457.632 172.364 454.66 169.4ZM320 336H192C187.757 336 183.687 334.314 180.686 331.314C177.686 328.313 176 324.243 176 320C176 315.757 177.686 311.687 180.686 308.686C183.687 305.686 187.757 304 192 304H320C324.243 304 328.313 305.686 331.314 308.686C334.314 311.687 336 315.757 336 320C336 324.243 334.314 328.313 331.314 331.314C328.313 334.314 324.243 336 320 336ZM336 160H176V144C176 122.783 184.429 102.434 199.431 87.4315C214.434 72.4285 234.783 64 256 64C277.217 64 297.566 72.4285 312.569 87.4315C327.571 102.434 336 122.783 336 144V160Z"
+                                fill="#A1A5B0" />
+                        </svg>
+
+                        <div class="job-tag">$120K - $140K</div>
+                    </div>
+                    <div class="flex gap-2">
+                        <svg class="icon" width="20" height="20" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M454.66 169.4C451.692 166.413 448.16 164.045 444.271 162.432C440.382 160.818 436.211 159.992 432 160H368V144C368 114.296 356.2 85.8081 335.196 64.804C314.192 43.8 285.704 32 256 32C226.296 32 197.808 43.8 176.804 64.804C155.8 85.8081 144 114.296 144 144V160H80C71.5131 160 63.3737 163.371 57.3726 169.373C51.3714 175.374 48 183.513 48 192V408C48 447 81 480 120 480H392C410.865 480.006 428.983 472.63 442.48 459.45C449.272 452.97 454.681 445.181 458.38 436.553C462.078 427.925 463.99 418.637 464 409.25V192C464.013 187.803 463.194 183.645 461.591 179.766C459.988 175.887 457.632 172.364 454.66 169.4ZM320 336H192C187.757 336 183.687 334.314 180.686 331.314C177.686 328.313 176 324.243 176 320C176 315.757 177.686 311.687 180.686 308.686C183.687 305.686 187.757 304 192 304H320C324.243 304 328.313 305.686 331.314 308.686C334.314 311.687 336 315.757 336 320C336 324.243 334.314 328.313 331.314 331.314C328.313 334.314 324.243 336 320 336ZM336 160H176V144C176 122.783 184.429 102.434 199.431 87.4315C214.434 72.4285 234.783 64 256 64C277.217 64 297.566 72.4285 312.569 87.4315C327.571 102.434 336 122.783 336 144V160Z"
+                                fill="#A1A5B0" />
+                        </svg>
+
+                        <div class="job-tag">Closing on January 9,2020</div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-buttons flex items-center">
+                <div class="flex justify-between">
+                    <button type="button" class=" flex gap-2 text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center  mr-2 mb-2">
+                        <svg class="icon" width="15" height="15" viewBox="0 0 512 512" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M358.62 129.279L86.49 402.079L70 441.999L109.92 425.509L382.72 153.379L358.62 129.279Z"
+                                stroke="black" stroke-width="44" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M413.07 74.8402L401.28 86.6202L425.38 110.72L437.17 98.9302C440.264 95.8344 442.002 91.6368 442.002 87.2602C442.002 82.8836 440.264 78.6861 437.17 75.5902L436.42 74.8402C434.887 73.3069 433.067 72.0907 431.064 71.2608C429.061 70.431 426.914 70.0039 424.745 70.0039C422.577 70.0039 420.43 70.431 418.427 71.2608C416.424 72.0907 414.603 73.3069 413.07 74.8402Z"
+                                stroke="black" stroke-width="44" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        Edit
+                    </button>
+                    <button type="button" class=" flex gap-2 text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center  mr-2 mb-2">
+                        <svg class="icon" width="15" height="15" viewBox="0 0 512 512" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M358.62 129.279L86.49 402.079L70 441.999L109.92 425.509L382.72 153.379L358.62 129.279Z"
+                                stroke="black" stroke-width="44" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M413.07 74.8402L401.28 86.6202L425.38 110.72L437.17 98.9302C440.264 95.8344 442.002 91.6368 442.002 87.2602C442.002 82.8836 440.264 78.6861 437.17 75.5902L436.42 74.8402C434.887 73.3069 433.067 72.0907 431.064 71.2608C429.061 70.431 426.914 70.0039 424.745 70.0039C422.577 70.0039 420.43 70.431 418.427 71.2608C416.424 72.0907 414.603 73.3069 413.07 74.8402Z"
+                                stroke="black" stroke-width="44" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        View
+                    </button>
+
+                    <div class="relative inline-block text-left">
+                        <div>
+                            <button type="button" class="inline-flex w-full justify-center gap-x-1.5  rounded-md bg-purple-700 px-3 py-2 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300 " id="menu-button" aria-expanded="true" aria-haspopup="true">
+                                Published
+                                <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="white"
+                                    aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- <div class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                            <div class="py-1" role="none">
+                              
+                                <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
+                                <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Support</a>
+                                <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">License</a>
+                                <form method="POST" action="#" role="none">
+                                    <button type="submit" class="text-gray-700 block w-full px-4 py-2 text-left text-sm" role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button>
+                                </form>
+                            </div>
+                        </div> -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="content-navigation px-5 pt-5 border-b-2 border-gray-100 text-sm ">
+            <div class="condidates text-xl ">
+                Condidates
+            </div>
+            <div class="navigation flex mt-5">
+                <div class="nav-item flex mr-8 pb-3 items-center">
+
+                    <div class="text-gray-500">Applied</div>
+                    <span class="inline-flex items-center justify-center w-3 h-3 ml-3 p-3  bg-gray-200 rounded-full">
+                        2
+                    </span>
+                </div>
+                <div class="nav-item flex mr-8 pb-3 items-center">
+
+                    <div class="text-gray-500">Phone Screening</div>
+                    <span class="inline-flex items-center justify-center w-3 h-3 ml-3 p-3  bg-gray-200 rounded-full">
+                        2
+                    </span>
+
+                </div>
+                <div class="nav-item flex mr-8 pb-3 border-b-2 border-purple-500 ">
+
+                    <div class="text-gray-500">Interview</div>
+                    <span class="inline-flex items-center justify-center w-3 h-3 ml-3 p-3  bg-gray-200 rounded-full">
+                        2
+                    </span>
+                </div>
+                <div class="nav-item flex mr-8 pb-3 items-center">
+                    <div class="text-gray-500">Offer</div>
+                </div>
+                <div class="nav-item flex mr-8 pb-3 items-center">
+                    <div class="text-gray-500">Disqualified</div>
+                </div>
+            </div>
+        </div>
+        <div class="overflow-y-scroll" style="height:calc(100vh - 386px)">
+            <div class="content  px-5 text-sm ">
+                <div class="condidate-row flex  items-center justify-between border-b-2 border-gray-100 py-5">
+                    <div class="flex gap-4 ">
+                        <div class="account-id">
+                            <img class="block mx-auto h-10 w-10 rounded-full sm:mx-0 sm:shrink-0" src="./assets/profile.jpeg" alt="logo">
+                        </div>
+                        <div class="">
+                            <div class="text-purple-600 font-semibold mb-1">Emily Selman</div>
+                            <div class="flex gap-2 text-gray-400 items-center">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                    <path fill="currentColor"
+                                        d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25v-8.5C0 2.784.784 2 1.75 2ZM1.5 12.251c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V5.809L8.38 9.397a.75.75 0 0 1-.76 0L1.5 5.809v6.442Zm13-8.181v-.32a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25v.32L8 7.88Z" />
+                                </svg>
+                                <div class="job-tag ">emily@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div>Applied on January 7,2020</div>
+                            <div class="flex items-center gap-2 mt-1">
+                                <div class=""><svg width="18" height="18" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M256 48C141.31 48 48 141.31 48 256C48 370.69 141.31 464 256 464C370.69 464 464 370.69 464 256C464 141.31 370.69 48 256 48ZM218 360.38L137.4 270.81L161.19 249.4L217.19 311.62L350 153.46L374.54 174L218 360.38Z"
+                                            fill="green" />
+                                    </svg>
+                                </div>
+                                <div class="text-gray-400">Completed phone Screening</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <svg class="icon" width="15" height="15" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M184 112L328 256L184 400" stroke="gray" stroke-width="48" stroke-miterlimit="10"
+                                stroke-linecap="square" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="condidate-row flex  items-center justify-between border-b-2 border-gray-100 py-5">
+                    <div class="flex gap-4 ">
+                        <div class="account-id">
+                            <img class="block mx-auto h-10 w-10 rounded-full sm:mx-0 sm:shrink-0" src="./assets/profile.jpeg" alt="logo">
+                        </div>
+                        <div class="">
+                            <div class="text-purple-600 font-semibold mb-1">Emily Selman</div>
+                            <div class="flex gap-2 text-gray-400 items-center">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                    <path fill="currentColor"
+                                        d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25v-8.5C0 2.784.784 2 1.75 2ZM1.5 12.251c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V5.809L8.38 9.397a.75.75 0 0 1-.76 0L1.5 5.809v6.442Zm13-8.181v-.32a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25v.32L8 7.88Z" />
+                                </svg>
+                                <div class="job-tag ">emily@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div>Applied on January 7,2020</div>
+                            <div class="flex items-center gap-2 mt-1">
+                                <div class=""><svg width="18" height="18" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M256 48C141.31 48 48 141.31 48 256C48 370.69 141.31 464 256 464C370.69 464 464 370.69 464 256C464 141.31 370.69 48 256 48ZM218 360.38L137.4 270.81L161.19 249.4L217.19 311.62L350 153.46L374.54 174L218 360.38Z"
+                                            fill="green" />
+                                    </svg>
+                                </div>
+                                <div class="text-gray-400">Completed phone Screening</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <svg class="icon" width="15" height="15" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M184 112L328 256L184 400" stroke="gray" stroke-width="48" stroke-miterlimit="10"
+                                stroke-linecap="square" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="condidate-row flex  items-center justify-between border-b-2 border-gray-100 py-5">
+                    <div class="flex gap-4 ">
+                        <div class="account-id">
+                            <img class="block mx-auto h-10 w-10 rounded-full sm:mx-0 sm:shrink-0" src="./assets/profile.jpeg" alt="logo">
+                        </div>
+                        <div class="">
+                            <div class="text-purple-600 font-semibold mb-1">Emily Selman</div>
+                            <div class="flex gap-2 text-gray-400 items-center">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                    <path fill="currentColor"
+                                        d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25v-8.5C0 2.784.784 2 1.75 2ZM1.5 12.251c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V5.809L8.38 9.397a.75.75 0 0 1-.76 0L1.5 5.809v6.442Zm13-8.181v-.32a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25v.32L8 7.88Z" />
+                                </svg>
+                                <div class="job-tag ">emily@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div>Applied on January 7,2020</div>
+                            <div class="flex items-center gap-2 mt-1">
+                                <div class=""><svg width="18" height="18" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M256 48C141.31 48 48 141.31 48 256C48 370.69 141.31 464 256 464C370.69 464 464 370.69 464 256C464 141.31 370.69 48 256 48ZM218 360.38L137.4 270.81L161.19 249.4L217.19 311.62L350 153.46L374.54 174L218 360.38Z"
+                                            fill="green" />
+                                    </svg>
+                                </div>
+                                <div class="text-gray-400">Completed phone Screening</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <svg class="icon" width="15" height="15" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M184 112L328 256L184 400" stroke="gray" stroke-width="48" stroke-miterlimit="10"
+                                stroke-linecap="square" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="condidate-row flex  items-center justify-between border-b-2 border-gray-100 py-5">
+                    <div class="flex gap-4 ">
+                        <div class="account-id">
+                            <img class="block mx-auto h-10 w-10 rounded-full sm:mx-0 sm:shrink-0" src="./assets/profile.jpeg" alt="logo">
+                        </div>
+                        <div class="">
+                            <div class="text-purple-600 font-semibold mb-1">Emily Selman</div>
+                            <div class="flex gap-2 text-gray-400 items-center">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                    <path fill="currentColor"
+                                        d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25v-8.5C0 2.784.784 2 1.75 2ZM1.5 12.251c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V5.809L8.38 9.397a.75.75 0 0 1-.76 0L1.5 5.809v6.442Zm13-8.181v-.32a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25v.32L8 7.88Z" />
+                                </svg>
+                                <div class="job-tag ">emily@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div>Applied on January 7,2020</div>
+                            <div class="flex items-center gap-2 mt-1">
+                                <div class=""><svg width="18" height="18" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M256 48C141.31 48 48 141.31 48 256C48 370.69 141.31 464 256 464C370.69 464 464 370.69 464 256C464 141.31 370.69 48 256 48ZM218 360.38L137.4 270.81L161.19 249.4L217.19 311.62L350 153.46L374.54 174L218 360.38Z"
+                                            fill="green" />
+                                    </svg>
+                                </div>
+                                <div class="text-gray-400">Completed phone Screening</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <svg class="icon" width="15" height="15" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M184 112L328 256L184 400" stroke="gray" stroke-width="48" stroke-miterlimit="10"
+                                stroke-linecap="square" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="condidate-row flex  items-center justify-between border-b-2 border-gray-100 py-5">
+                    <div class="flex gap-4 ">
+                        <div class="account-id">
+                            <img class="block mx-auto h-10 w-10 rounded-full sm:mx-0 sm:shrink-0" src="./assets/profile.jpeg" alt="logo">
+                        </div>
+                        <div class="">
+                            <div class="text-purple-600 font-semibold mb-1">Emily Selman</div>
+                            <div class="flex gap-2 text-gray-400 items-center">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                    <path fill="currentColor"
+                                        d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25v-8.5C0 2.784.784 2 1.75 2ZM1.5 12.251c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V5.809L8.38 9.397a.75.75 0 0 1-.76 0L1.5 5.809v6.442Zm13-8.181v-.32a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25v.32L8 7.88Z" />
+                                </svg>
+                                <div class="job-tag ">emily@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div>Applied on January 7,2020</div>
+                            <div class="flex items-center gap-2 mt-1">
+                                <div class=""><svg width="18" height="18" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M256 48C141.31 48 48 141.31 48 256C48 370.69 141.31 464 256 464C370.69 464 464 370.69 464 256C464 141.31 370.69 48 256 48ZM218 360.38L137.4 270.81L161.19 249.4L217.19 311.62L350 153.46L374.54 174L218 360.38Z"
+                                            fill="green" />
+                                    </svg>
+                                </div>
+                                <div class="text-gray-400">Completed phone Screening</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <svg class="icon" width="15" height="15" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M184 112L328 256L184 400" stroke="gray" stroke-width="48" stroke-miterlimit="10"
+                                stroke-linecap="square" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="condidate-row flex  items-center justify-between border-b-2 border-gray-100 py-5">
+                    <div class="flex gap-4 ">
+                        <div class="account-id">
+                            <img class="block mx-auto h-10 w-10 rounded-full sm:mx-0 sm:shrink-0" src="./assets/profile.jpeg" alt="logo">
+                        </div>
+                        <div class="">
+                            <div class="text-purple-600 font-semibold mb-1">Emily Selman</div>
+                            <div class="flex gap-2 text-gray-400 items-center">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                    <path fill="currentColor"
+                                        d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25v-8.5C0 2.784.784 2 1.75 2ZM1.5 12.251c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V5.809L8.38 9.397a.75.75 0 0 1-.76 0L1.5 5.809v6.442Zm13-8.181v-.32a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25v.32L8 7.88Z" />
+                                </svg>
+                                <div class="job-tag ">emily@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div>Applied on January 7,2020</div>
+                            <div class="flex items-center gap-2 mt-1">
+                                <div class=""><svg width="18" height="18" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M256 48C141.31 48 48 141.31 48 256C48 370.69 141.31 464 256 464C370.69 464 464 370.69 464 256C464 141.31 370.69 48 256 48ZM218 360.38L137.4 270.81L161.19 249.4L217.19 311.62L350 153.46L374.54 174L218 360.38Z"
+                                            fill="green" />
+                                    </svg>
+                                </div>
+                                <div class="text-gray-400">Completed phone Screening</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <svg class="icon" width="15" height="15" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M184 112L328 256L184 400" stroke="gray" stroke-width="48" stroke-miterlimit="10"
+                                stroke-linecap="square" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="condidate-row flex  items-center justify-between border-b-2 border-gray-100 py-5">
+                    <div class="flex gap-4 ">
+                        <div class="account-id">
+                            <img class="block mx-auto h-10 w-10 rounded-full sm:mx-0 sm:shrink-0" src="./assets/profile.jpeg" alt="logo">
+                        </div>
+                        <div class="">
+                            <div class="text-purple-600 font-semibold mb-1">Emily Selman</div>
+                            <div class="flex gap-2 text-gray-400 items-center">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                    <path fill="currentColor"
+                                        d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25v-8.5C0 2.784.784 2 1.75 2ZM1.5 12.251c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V5.809L8.38 9.397a.75.75 0 0 1-.76 0L1.5 5.809v6.442Zm13-8.181v-.32a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25v.32L8 7.88Z" />
+                                </svg>
+                                <div class="job-tag ">emily@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div>Applied on January 7,2020</div>
+                            <div class="flex items-center gap-2 mt-1">
+                                <div class=""><svg width="18" height="18" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M256 48C141.31 48 48 141.31 48 256C48 370.69 141.31 464 256 464C370.69 464 464 370.69 464 256C464 141.31 370.69 48 256 48ZM218 360.38L137.4 270.81L161.19 249.4L217.19 311.62L350 153.46L374.54 174L218 360.38Z"
+                                            fill="green" />
+                                    </svg>
+                                </div>
+                                <div class="text-gray-400">Completed phone Screening</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <svg class="icon" width="15" height="15" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M184 112L328 256L184 400" stroke="gray" stroke-width="48" stroke-miterlimit="10"
+                                stroke-linecap="square" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="condidate-row flex  items-center justify-between border-b-2 border-gray-100 py-5">
+                    <div class="flex gap-4 ">
+                        <div class="account-id">
+                            <img class="block mx-auto h-10 w-10 rounded-full sm:mx-0 sm:shrink-0" src="./assets/profile.jpeg" alt="logo">
+                        </div>
+                        <div class="">
+                            <div class="text-purple-600 font-semibold mb-1">Emily Selman</div>
+                            <div class="flex gap-2 text-gray-400 items-center">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                    <path fill="currentColor"
+                                        d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25v-8.5C0 2.784.784 2 1.75 2ZM1.5 12.251c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V5.809L8.38 9.397a.75.75 0 0 1-.76 0L1.5 5.809v6.442Zm13-8.181v-.32a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25v.32L8 7.88Z" />
+                                </svg>
+                                <div class="job-tag ">emily@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div>Applied on January 7,2020</div>
+                            <div class="flex items-center gap-2 mt-1">
+                                <div class=""><svg width="18" height="18" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M256 48C141.31 48 48 141.31 48 256C48 370.69 141.31 464 256 464C370.69 464 464 370.69 464 256C464 141.31 370.69 48 256 48ZM218 360.38L137.4 270.81L161.19 249.4L217.19 311.62L350 153.46L374.54 174L218 360.38Z"
+                                            fill="green" />
+                                    </svg>
+                                </div>
+                                <div class="text-gray-400">Completed phone Screening</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <svg class="icon" width="15" height="15" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M184 112L328 256L184 400" stroke="gray" stroke-width="48" stroke-miterlimit="10"
+                                stroke-linecap="square" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="condidate-row flex  items-center justify-between border-b-2 border-gray-100 py-5">
+                    <div class="flex gap-4 ">
+                        <div class="account-id">
+                            <img class="block mx-auto h-10 w-10 rounded-full sm:mx-0 sm:shrink-0" src="./assets/profile.jpeg" alt="logo">
+                        </div>
+                        <div class="">
+                            <div class="text-purple-600 font-semibold mb-1">Emily Selman</div>
+                            <div class="flex gap-2 text-gray-400 items-center">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                    <path fill="currentColor"
+                                        d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25v-8.5C0 2.784.784 2 1.75 2ZM1.5 12.251c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V5.809L8.38 9.397a.75.75 0 0 1-.76 0L1.5 5.809v6.442Zm13-8.181v-.32a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25v.32L8 7.88Z" />
+                                </svg>
+                                <div class="job-tag ">emily@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div>Applied on January 7,2020</div>
+                            <div class="flex items-center gap-2 mt-1">
+                                <div class=""><svg width="18" height="18" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M256 48C141.31 48 48 141.31 48 256C48 370.69 141.31 464 256 464C370.69 464 464 370.69 464 256C464 141.31 370.69 48 256 48ZM218 360.38L137.4 270.81L161.19 249.4L217.19 311.62L350 153.46L374.54 174L218 360.38Z"
+                                            fill="green" />
+                                    </svg>
+                                </div>
+                                <div class="text-gray-400">Completed phone Screening</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <svg class="icon" width="15" height="15" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M184 112L328 256L184 400" stroke="gray" stroke-width="48" stroke-miterlimit="10"
+                                stroke-linecap="square" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="condidate-row flex  items-center justify-between border-b-2 border-gray-100 py-5">
+                    <div class="flex gap-4 ">
+                        <div class="account-id">
+                            <img class="block mx-auto h-10 w-10 rounded-full sm:mx-0 sm:shrink-0" src="./assets/profile.jpeg" alt="logo">
+                        </div>
+                        <div class="">
+                            <div class="text-purple-600 font-semibold mb-1">Emily Selman</div>
+                            <div class="flex gap-2 text-gray-400 items-center">
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                    <path fill="currentColor"
+                                        d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25v-8.5C0 2.784.784 2 1.75 2ZM1.5 12.251c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V5.809L8.38 9.397a.75.75 0 0 1-.76 0L1.5 5.809v6.442Zm13-8.181v-.32a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25v.32L8 7.88Z" />
+                                </svg>
+                                <div class="job-tag ">emily@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div>Applied on January 7,2020</div>
+                            <div class="flex items-center gap-2 mt-1">
+                                <div class=""><svg width="18" height="18" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M256 48C141.31 48 48 141.31 48 256C48 370.69 141.31 464 256 464C370.69 464 464 370.69 464 256C464 141.31 370.69 48 256 48ZM218 360.38L137.4 270.81L161.19 249.4L217.19 311.62L350 153.46L374.54 174L218 360.38Z"
+                                            fill="green" />
+                                    </svg>
+                                </div>
+                                <div class="text-gray-400">Completed phone Screening</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <svg class="icon" width="15" height="15" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M184 112L328 256L184 400" stroke="gray" stroke-width="48" stroke-miterlimit="10"
+                                stroke-linecap="square" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-navigation text-sm flex justify-between px-5 items-end pb-5">
+            <div class="prev flex gap-2">
+                <svg class="icon" width="18" height="18" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M244 400L100 256L244 112" stroke="black" stroke-width="48" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M120 256H412" stroke="black" stroke-width="48" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                <div class="text-gray-400">
+                    Previous
+                </div>
+            </div>
+            <div class="page-numbers flex ">
+                <div class="border-purple-500 border-t-2 w-10 flex justify-center pt-2">1</div>
+                <div class="w-10 flex justify-center pt-2">2</div>
+                <div class="w-10 flex justify-center pt-2">4</div>
+                <div class="w-10 flex justify-center pt-2">5</div>
+                <div class="w-10 flex justify-center pt-2">6</div>
+
+            </div>
+            <div class="next flex gap-2">
+                <div class="text-gray-400">
+                    Next
+                </div>
+                <svg class="icon" width="18" height="18" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M268 112L412 256L268 400" stroke="black" stroke-width="48" stroke-miterlimit="10"
+                        stroke-linecap="square" />
+                    <path d="M392 256H100" stroke="black" stroke-width="48" stroke-miterlimit="10"
+                        stroke-linecap="square" />
+                </svg>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
